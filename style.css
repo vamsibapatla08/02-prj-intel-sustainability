@@ -1,1 +1,80 @@
-/* Add your CSS here */
+/* Basic page reset for consistent spacing */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
+}
+
+/* Header with a soft navy-to-eco-green gradient */
+header {
+	background: linear-gradient(135deg, #0b1f4d, #2fa86b);
+	color: #ffffff;
+	text-align: center;
+	padding: 160px 25px;
+	transition: background 1s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Make the logo smaller and centered */
+header img {
+	width: 220px;
+	max-width: 80%;
+	display: block;
+	margin: 0 auto 40px;
+	transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Soft lift and blue glow on hover */
+header img:hover {
+	transform: translateY(-10px);
+	filter: drop-shadow(0 8px 12px rgba(42, 86, 160, 0.5));
+}
+
+/* Limit the text width so it reads nicely */
+header div {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+/* Decorative header icons */
+.header-icon {
+	position: absolute;
+	width: 90px;
+	max-width: 25vw;
+	opacity: 0.85;
+	padding: 6px;
+	border-radius: 12px;
+	background-color: rgba(255, 255, 255, 0);
+	transition: transform 0.4s ease, background-color 0.4s ease;
+	display: block;
+}
+
+/* Smooth hover grow with a soft background glow */
+.header-icon:hover {
+	transform: scale(1.12);
+	background-color: rgba(255, 255, 255, 0.12);
+}
+
+.header-icon-chip {
+	top: 20px;
+	left: 20px;
+}
+
+.header-icon-plant {
+	bottom: 20px;
+	right: 20px;
+}
+
+/* Larger header text for the title and description */
+header h1 {
+	font-size: 2.2rem;
+	margin: 12px 0 12px;
+	transform: translateY(50px);
+}
+
+header p {
+	font-size: 1.1rem;
+	margin: 0;
+	transform: translateY(50px);
+}
