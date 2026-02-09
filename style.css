@@ -145,6 +145,13 @@ header::after {
   /* Fixed card width so 4 fit inside the container */
   flex: 0 0 220px;
   min-width: 220px;
+  /* Make the card shorter and stack text top/bottom */
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
   /* Snap each card to the start edge */
   scroll-snap-align: start;
   /* Encourage the scroll to stop on each card */
@@ -153,10 +160,44 @@ header::after {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
+/* Keep headings tight inside the smaller card */
+.timeline div h2,
+.timeline div h3 {
+  margin: 0;
+}
+
 .timeline div:hover {
   border-color: #000000;
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.16);
+}
+
+/* Hide headings when the overlay is visible */
+.timeline div:hover h2,
+.timeline div:hover h3 {
+  opacity: 0;
+}
+
+/* Hide the paragraph until hover */
+.timeline div p {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* Show the paragraph overlay on hover */
+.timeline div:hover p {
+  opacity: 1;
 }
 
 /* Center the timeline helper text */
