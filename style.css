@@ -109,21 +109,40 @@ header::after {
 }
 
 /* Timeline section with a pale white background */
-section {
-	background-color: #f7f7f2;
+.timeline {
+	background-color: transparent;
+	border: none;
 	padding: 40px 20px;
+	/* Flexbox places the cards in a row */
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
+	/* Show 4 cards at a time and scroll for the rest */
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	/* Smooth horizontal scroll */
+	scroll-behavior: smooth;
 	gap: 20px;
-	justify-content: center;
+	justify-content: flex-start;
+	/* Center the container on the page */
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 940px;
+	margin: 150px auto 150px;
 }
 
 /* Rectangular cards for each timeline item */
-section div {
+.timeline div {
 	background-color: #ffffff;
 	border: 1px solid #e3e3e3;
 	border-radius: 8px;
 	padding: 20px;
-	width: 260px;
+	/* Fixed card width so 4 fit inside the container */
+	flex: 0 0 220px;
+	min-width: 220px;
+	transition: border-color 0.25s ease;
 	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.timeline div:hover {
+	border-color: #000000;
 }
