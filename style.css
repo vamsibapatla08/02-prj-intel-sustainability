@@ -7,7 +7,7 @@ body {
 
 /* Header with a soft navy-to-eco-green gradient */
 header {
-  background: linear-gradient(135deg, #0b1f4d, #2fa86b);
+  background: linear-gradient(135deg, #0071c5, #2fa86b);
   color: #ffffff;
   text-align: center;
   padding: 160px 25px;
