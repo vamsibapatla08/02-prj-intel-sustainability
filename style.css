@@ -189,7 +189,21 @@ header p {
 
 /* Add a background image to the seventh card */
 .timeline div:nth-child(7) {
+  background-image: url("img/netO.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add a background image to the eighth card */
+.timeline div:nth-child(8) {
   background-image: url("img/nat.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add a background image to the ninth card */
+.timeline div:nth-child(9) {
+  background-image: url("img/sem.jpg");
   background-size: cover;
   background-position: center;
 }
