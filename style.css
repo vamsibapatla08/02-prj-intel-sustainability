@@ -21,16 +21,17 @@ header {
 
 /* Make the logo smaller and centered */
 .header-logo {
-  width: 320px;
+  width: 270px;
   max-width: 80%;
   display: block;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px;
+  transform: translateY(0) scale(1);
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 /* Soft lift and blue glow on hover */
 .header-logo:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.06);
   filter: drop-shadow(0 8px 12px rgba(42, 86, 160, 0.5));
 }
 
@@ -145,7 +146,6 @@ header::after {
   border: 1px solid #e3e3e3;
   border-radius: 8px;
   padding: 20px;
-  /* Fixed card width so 4 fit inside the container */
   flex: 0 0 220px;
   min-width: 220px;
   /* Make the card shorter and stack text top/bottom */
@@ -167,6 +167,8 @@ header::after {
 .timeline div h2,
 .timeline div h3 {
   margin: 0;
+  /* Fade the headings smoothly when the card is hovered */
+  transition: opacity 0.3s ease;
 }
 
 .timeline div:hover {
@@ -176,8 +178,7 @@ header::after {
 }
 
 /* Hide headings when the overlay is visible */
-.timeline div:hover h2,
-.timeline div:hover h3 {
+.timeline div:hover h2, .timeline div:hover h3 {
   opacity: 0;
 }
 
