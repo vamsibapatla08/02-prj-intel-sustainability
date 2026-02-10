@@ -3,6 +3,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.5;
+  /* Subtle Intel-inspired light background for the page (excluding header) */
+  background-color: #f6f9fc;
+  background-image: linear-gradient(180deg, #ffffff 0%, #eef5fb 100%);
 }
 
 /* Header with a soft navy-to-eco-green gradient */
@@ -10,7 +13,7 @@ header {
   background: linear-gradient(135deg, #0071c5, #2fa86b);
   color: #ffffff;
   text-align: center;
-  padding: 160px 25px;
+  padding: 130px 25px;
   transition: background 1s ease;
   position: relative;
   overflow: hidden;
@@ -18,7 +21,7 @@ header {
 
 /* Make the logo smaller and centered */
 .header-logo {
-  width: 260px;
+  width: 320px;
   max-width: 80%;
   display: block;
   margin: 0 auto 40px;
@@ -126,7 +129,7 @@ header::after {
   scroll-padding: 20px;
   /* Smoother touch scrolling on mobile */
   -webkit-overflow-scrolling: touch;
-  gap: 20px;
+  gap: 18px;
   justify-content: flex-start;
   /* Center the container on the page */
   box-sizing: border-box;
@@ -146,7 +149,7 @@ header::after {
   flex: 0 0 220px;
   min-width: 220px;
   /* Make the card shorter and stack text top/bottom */
-  height: 220px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -184,6 +187,9 @@ header::after {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.65);
   color: #ffffff;
+  /* Use Ubuntu for card text and make it a bit larger */
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-size: 1.05rem;
   padding: 20px;
   margin: 0;
   display: flex;
@@ -202,8 +208,11 @@ header::after {
 
 /* Center the timeline helper text */
 .timeline-note {
+  background-color: #0071c5;
+  color: #ffffff;
   text-align: center;
-  margin: 0 0 60px;
+  margin: 0;
+  padding: 5px 20px;
 }
 
 /* Stack the timeline vertically on small screens */
