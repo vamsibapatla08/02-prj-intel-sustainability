@@ -5,14 +5,10 @@ body {
   line-height: 1.5;
   /* Subtle Intel-inspired light background for the page (excluding header) */
   background-color: #f6f9fc;
+  /* Soft wave-like layers for a gentle, pale background */
   background-image:
-    repeating-linear-gradient(
-      135deg,
-      rgba(0, 113, 197, 0.04) 0,
-      rgba(0, 113, 197, 0.04) 8px,
-      transparent 8px,
-      transparent 28px
-    ),
+    radial-gradient(120% 60% at 50% 0%, rgba(0, 113, 197, 0.08) 0%, transparent 60%),
+    radial-gradient(120% 60% at 50% 100%, rgba(0, 113, 197, 0.06) 0%, transparent 60%),
     linear-gradient(180deg, #ffffff 0%, #eef5fb 100%);
 }
 
@@ -96,31 +92,7 @@ header p {
   transform: translateY(50px);
 }
 
-/* Decorative zigzag curves in the header corners */
-header::before,
-header::after {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3Cpath%20d='M0%20200%20C40%20160%2080%20240%20120%20200%20C160%20160%20200%20240%20240%20200'%20stroke='%23ffffff'%20stroke-width='6'%20fill='none'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.28;
-  pointer-events: none;
-  z-index: 0;
-}
 
-header::before {
-  left: -40px;
-  bottom: -30px;
-}
-
-header::after {
-  right: -40px;
-  top: -30px;
-  transform: rotate(180deg);
-}
 
 /* Timeline section with a pale white background */
 .timeline {
@@ -140,12 +112,12 @@ header::after {
   scroll-padding: 20px;
   /* Smoother touch scrolling on mobile */
   -webkit-overflow-scrolling: touch;
-  gap: 18px;
+  gap: 20px;
   justify-content: flex-start;
   /* Center the container on the page */
   box-sizing: border-box;
   /* 4 cards plus 20px padding on both sides: 880px + 40px = 920px */
-  width: 855px;
+  width: 858px;
   max-width: 100%;
   margin: 150px auto 150px;
 }
@@ -159,7 +131,7 @@ header::after {
   flex: 0 0 220px;
   min-width: 220px;
   /* Make the card shorter and stack text top/bottom */
-  height: 250px;
+  height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -180,6 +152,48 @@ header::after {
   background-position: center;
 }
 
+/* Add a background image to the second card */
+.timeline div:nth-child(2) {
+  background-image: url("img/intel 1st micro.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add a background image to the third card */
+.timeline div:nth-child(3) {
+  background-image: url("img/3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add a background image to the fourth card */
+.timeline div:nth-child(4) {
+  background-image: url("img/4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add a background image to the fifth card */
+.timeline div:nth-child(5) {
+  background-image: url("img/ghg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add a background image to the sixth card */
+.timeline div:nth-child(6) {
+  background-image: url("img/intel rise.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add a background image to the seventh card */
+.timeline div:nth-child(7) {
+  background-image: url("img/nat.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 /* Keep headings tight inside the smaller card */
 .timeline div h2,
 .timeline div h3 {
@@ -187,12 +201,17 @@ header::after {
   font-family: "Josefin Sans", Arial, sans-serif;
   /* Fade the headings smoothly when the card is hovered */
   transition: opacity 0.3s ease;
+  /* Semi-transparent black label behind the heading text */
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
-/* Match the heading color to the first card image for better contrast */
+/* Keep the first card headings readable on the photo */
 .timeline div:first-child h2,
 .timeline div:first-child h3 {
-  color: #ffffff;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
