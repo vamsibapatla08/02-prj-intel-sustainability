@@ -173,7 +173,7 @@ header::after {
 
 .timeline div:hover {
   border-color: #000000;
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-6px) scale(1.04);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.16);
 }
 
